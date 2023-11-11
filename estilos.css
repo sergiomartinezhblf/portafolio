@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+:root{
+    --color-principal: rgb(0 166 142);
+    --color-secundario: rgb(242, 236, 236);
+}
+
+#home{
+    background-color:white;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.principal{
+    background-color: var(--color-principal) !important;
+}
+
+.navbar{
+    height: 15vh;
+}
+
+.collapse ul li a{
+  color: white;
+}
+
+#home{
+    height: 85vh;
+
+}
+
+#home div{
+    height: 100%;
+}
+
+.container .row{
+    margin: 0 15%;
+}
+
+.oculto{
+    color: white;
+}
+
+/* DARK MODE */
+.dark{
+    background-color: #121212;
+    color: white;
+}
+
+.dark_title{
+    color: var(--color-principal);
+}
+
+.dark_card{
+    background-color: rgb(106, 105, 105);
+}
+
+.dark_secondary{
+    background-color:  #2d343e;
+}
+
+.dynamic_texts li.dark_li{
+    --bg-pseudo :  #121212;
+    color: white;
+}
+
+.oculto_dark{
+    color: #121212;
+}
+
+
+
+/* ANIMACION TYPING TEXT */
+.text_typing_animation{
+    display: flex;
+}
+
+.static_text{
+    color: var(--color-principal);
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 30px;
+    height: 30px;
+    margin-right: 0px;
+}
+
+.dynamic_texts{
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+
+.dynamic_texts li{
+    list-style: none;
+    color: darkblue;
+    font-size: 30px;
+    top: 0;
+    position: relative;
+    animation: slide 6s steps(2) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -60px;
+    }
+}
+
+.dynamic_texts li{
+    position: relative;
+    --bg-pseudo : white;
+}
+
+.dynamic_texts li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-pseudo);
+    border-left: 3px solid var(--color-secundario);
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing{
+    40%,
+    60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+#caratula{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+#caratula_foto{
+   position: absolute;
+   left: 50%;
+   top: 10%;
+}
+.estracto{
+    height: fit-content !important;
+    padding: 5px;
+    position: absolute;
+    box-shadow: 16px 14px 20px rgb(37, 36, 36);
+    background-color: var(--color-principal);
+    color: white;
+}
+
+h1{
+    margin-top: 20% ;
+    color: var(--color-principal);
+}
+
+.card{
+    background-color: var(--color-secundario);
+}
+
+/* MARCO ANIMADO FOTO DE PERFIL */
+    .marco{
+        width: 250px;
+        max-height: 250px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 16px 14px 20px grey;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    .marco::before{
+        content: "";
+        background-image: conic-gradient(from 90deg, rgb(0 0 0 / 0%) 70%, rgb(11 78 230 / 9% ) 80%, rgb(0 166 142) 100%);
+        height: 150%;
+        width: 150%;
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        animation: rotacion 2.5s linear infinite;
+    }
+
+    @keyframes rotacion {
+        100%{
+            transform: rotate(360deg) 
+        }
+    }
+
+    .marco::after{
+        content: "";
+        width: 94%;
+        height: 94%;
+        background-color: white;
+        position: absolute;
+        border-radius: 10px;
+        top: 3%;
+        left: 3%;
+
+    }
+
+    .foto{
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foto img{
+        width: 90%;
+    }
+
+    form .btn{
+        background-color: var(--color-principal);
+    }
+
+    form .btn:hover{
+        background-color: var(--color-secundario);
+        border: gray;
+    }
+
+    #btn-darkmode{
+        background-color: var(--color-principal);
+    }
+/* EFECTOS CARDS PROYECTOS */
+
+
+.tarjeta{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    background: var(--color-secundario);
+
+}
+
+.tarjeta>img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform .5s;
+
+}
+
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent,rgb(0 166 142) 38%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    transition: height .5s;
+    
+}
+
+.tarjeta:hover img{
+    transform: scale(1.2);
+}
+
+.tarjeta:hover .overlay{
+    height: 100%;
+}
+
+.overlay img{
+    margin: 0 5px;
+}
+
+
+.overlay h3{
+    position: relative;
+}
+
+/* EFECTO UNDERLINE TITULO PROYECTO */
+.overlay h3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transition-delay: 1s;
+}
+
+.tarjeta:hover .overlay h3::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* EFECTO FADEIN ICONOS TECONOLIAS UTILIZADAS */
+
+.overlay ul{
+    display: flex;
+}
+
+.overlay ul li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay ul{
+    position: relative;
+}
+
+.overlay ul li:first-child{
+    position: absolute;
+    opacity: 0;
+    left: -20px;
+    bottom: -35px;
+    transition: all .5s ease-in;
+    transition-delay: .4s;
+
+}
+
+.tarjeta:hover .overlay ul li:first-child{
+    opacity: 1;
+    bottom: -20px;
+}
+
+.overlay ul li:nth-child(2){
+    position: absolute;
+    opacity: 0;
+    left: 20px;
+    bottom: -35px;
+    transition: all .5s ease-in;
+    transition-delay: .6s;
+
+}
+
+.tarjeta:hover .overlay ul li:nth-child(2){
+    opacity: 1;
+    bottom: -20px;
+}
+
+.overlay ul li:nth-child(3){
+    position: absolute;
+    left: 65px;
+    opacity: 0;
+    bottom: -35px;
+    transition: all .5s ease-in;
+    transition-delay: .8s;
+}
+
+.tarjeta:hover .overlay ul li:nth-child(3){
+    opacity: 1;
+    bottom: -20px;
+}
+
+.overlay ul li:nth-child(4){
+    position: absolute;
+    left: 110px;
+    opacity: 0;
+    bottom: -35px;
+    transition: all .5s ease-in;
+    transition-delay: 1s;
+}
+
+.tarjeta:hover .overlay ul li:nth-child(4){
+    opacity: 1;
+    bottom: -20px;
+}
+
+.overlay ul li:nth-child(5){
+    position: absolute;
+    left: 150px;
+    opacity: 0;
+    bottom: -35px;
+    transition: all .5s ease-in;
+    transition-delay: 1.2s;
+}
+
+.tarjeta:hover .overlay ul li:nth-child(5){
+    opacity: 1;
+    bottom: -20px;
+}
+
+.overlay ul li:nth-child(6){
+    position: absolute;
+    left: 185px;
+    opacity: 0;
+    bottom: -35px;
+    transition: all .5s ease-in;
+    transition-delay: 1.4s;
+}
+
+.tarjeta:hover .overlay ul li:nth-child(6){
+    opacity: 1;
+    bottom: -20px;
+}
+
+
+@media (width> 991.98px) { 
+
+    .card h2{
+        font-size: 20px;
+    }
+
+    .tarjeta{
+        height: 200px;
+    }
+
+    .tarjeta img{
+        height: 100%;
+        object-fit:cover;
+    }
+
+    
+}
+
+
+@media (max-width: 991.98px){ 
+    .container .row{
+        margin: 0 10px;
+    }
+
+    .card h2{
+        font-size: 16px;
+    }
+
+    h1{
+        margin-top: 15%;
+    }
+
+    .estracto{
+        width: 80%;
+    }
+    
+    #caratula_foto{
+        display: none;
+    }
+
+    .marco, .foto{
+        display: none;
+    }
+
+    #form_contacto{
+        width: 80%;
+    }
+    
+    .tarjeta{
+        height: 200px;
+    }
+
+    .tarjeta img{
+        height: 100%;
+        object-fit:cover;
+    }
+
+    .tarjeta ul li img{
+        width: 20px;
+    }
+
+ }
+
+ @media (max-width: 575.98px) { 
+    .container .row{
+        margin: 0;
+    }
+
+    h1{
+        margin-top: 20%;
+    }
+
+    .tarjeta{
+        height: 250px;
+    }
+
+    .static_text{
+        font-size: 20px;
+        line-height: 20px;
+        height: 20px;
+    }
+    
+    .dynamic_texts{
+        line-height: 20px;
+        height: 20px;
+    }
+    
+    
+    .dynamic_texts li{
+        font-size: 20px;
+    }
+    
+    @keyframes slide{
+        100%{
+            top: -40px;
+        }
+    }
+
+    #form_contacto{
+        width: 80%;
+    }
+
+    .navbar-brand{
+        font-size: 14px;
+    }
+    
+    
+  }
