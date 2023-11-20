@@ -289,6 +289,31 @@ h1{
     position: relative;
 }
 
+.nav-link {
+    position: relative;
+}
+
+.nav-link{
+    width: fit-content;
+}
+
+.nav-link::before{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    visibility: hidden;
+    transition: all .2s;
+}
+
+.nav-link:hover::before{
+    visibility: visible;
+}
+
+
 /* EFECTO UNDERLINE TITULO PROYECTO */
 .overlay h3::before{
     content: "";
@@ -412,6 +437,19 @@ h1{
 }
 
 
+/* EFECTO INTERSECTION */
+
+.hidden{
+    transform: scale(.8);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.show{
+    transform: scale(1);
+    opacity: 1;
+}
+
 @media (width> 991.98px) { 
 
     .card h2{
@@ -514,9 +552,7 @@ h1{
         width: 80%;
     }
 
-    .navbar-brand{
-        font-size: 14px;
-    }
+
     
     
   }

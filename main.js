@@ -9,6 +9,8 @@ const li1 = document.getElementById("dynamic_li1")
 const li2 = document.getElementById("dynamic_li2")
 const cards = document.getElementsByClassName("card")
 const ocultos = document.getElementsByClassName("oculto")
+const navtitle = document.getElementById("navtitle")
+const secciones_ocultas= document.querySelectorAll(".hidden")
 
 //BOTON DARK MODE
 
@@ -58,3 +60,25 @@ darkmode.addEventListener("click",()=>{
         element.classList.add("oculto_dark")
     }
 })
+
+//CAMBIO DE CONTENIDO DE NAV TITLE
+const observer = new ResizeObserver( items =>{
+   let bodywidth = Math.ceil(items[0].contentRect.width)
+   if(bodywidth<450){
+    navtitle.innerHTML= `<i class="bi bi-diamond-half"></i> Portafolio`
+   } else {
+    navtitle.innerHTML= `<i class="bi bi-diamond-half"></i> Sergio Martínez | Portafolio`
+   }
+})
+observer.observe(body)
+
+
+//OBSERVADOR SCROLL
+
+const observer_scroll = new IntersectionObserver((entries)=>{
+   entries.forEach(entry=>{
+    entry.target.classList.toggle('show', entry.isIntersecting)
+   })
+})
+
+secciones_ocultas.forEach(seccion => observer_scroll.observe(seccion))

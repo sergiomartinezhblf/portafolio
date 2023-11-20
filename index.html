@@ -17,8 +17,7 @@
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md principal sticky-top">
-  <div class="container">
-    <a class="navbar-brand text-light" href="#"><i class="bi bi-diamond-half"></i> Sergio Martínez | Portafolio</a>
+    <a id="navtitle" class="navbar-brand text-light ps-3" href="#"><i class="bi bi-diamond-half"></i> Sergio Martínez | Portafolio</a>
     <!-- BOTON DARK MODE -->
 <div class="btn-group">
   <button id="btn-darkmode" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,11 +29,11 @@
     <li><a class="dropdown-item" href="#" id="darkmode" ><i class="bi bi-moon-stars"></i> Dark</a></li>
   </ul>
 </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse principal mt-2" id="navbarNav">
-      <ul class="navbar-nav ms-auto text-center">
+      <ul class="navbar-nav ms-auto text-center d-flex justify-content-center align-items-center">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Principal</a>
         </li>
@@ -49,7 +48,6 @@
         </li>
       </ul>
     </div>
-  </div>
 </nav>
 
 <!-- HOME -->
@@ -83,16 +81,16 @@
   <!-- ACERCA DE MI -->
   <section id="about" class="container mt-5">
     <div ><p class="oculto">""</p></div>
-    <h2 class="mt-5">Acerca de mi</h2>
-    <p id="acerca" class="mt-3 mt-md-5">Soy un desarrollador con habilidades Front End, sin experiencia laboral en el medio, en busca de una oportunidad para integrarme a un equipo de desarrollo. Por diversas 
+    <h2 class="mt-5 hidden">Acerca de mi</h2>
+    <p id="acerca" class="mt-3 mt-md-5 hidden">Soy un desarrollador con habilidades Front End, sin experiencia laboral en el medio, en busca de una oportunidad para integrarme a un equipo de desarrollo. Por diversas 
         circunstancias me aleje de la IT, pero estoy de vuelta, con toda la actitud y las habilidades para poder iniciar carrera en el desarrollo web.  
     </p>
-    <h2>Hard Skills</h2>
+    <h2 class="hidden">Hard Skills</h2>
     <div id="hard_skills" class="container align-items-center">
-    <h3 class="text-center mb-3">Lenguajes de programación</h3>    
+    <h3 class="text-center mb-3 hidden">Lenguajes de programación</h3>    
     <div class="row row-cols-3 g-3">
         <div class="col">
-        <div class="card">
+        <div class="card hidden">
             <img src="./assets/file_type_html_icon_130541.svg" class="card-img-top p-3" style="max-width: 250px;" alt="HTML">
             <div class="card-body">
               <h2 class="card-text text-center">HTML</h2>
@@ -100,7 +98,7 @@
         </div> 
         </div>
         <div class="col">
-        <div class="card">
+        <div class="card hidden">
             <img src="./assets/file_type_css_icon_130661.svg" class="card-img-top p-3" style="max-width: 250px;" alt="CSS">
             <div class="card-body">
               <h2 class="card-text text-center">CSS</h2>
@@ -108,7 +106,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="card">
+        <div class="card hidden">
             <img src="./assets/javascript_icon_130900.svg" class="card-img-top p-3" style="max-width: 250px;" alt="JAVASCRIPT">
             <div class="card-body">
               <h2 class="card-text text-center">Javascript</h2>
@@ -116,10 +114,10 @@
         </div>
         </div>
     </div>
-    <h3 class="text-center my-3">Librerias</h3>
+    <h3 class="text-center my-3 hidden">Librerias</h3>
     <div class="row row-cols-3 g-3">
         <div class="col">
-        <div class="card">
+        <div class="card hidden">
             <img src="./assets/bootstrap_plain_logo_icon_146619.svg" class="card-img-top p-3" alt="BOOSTRAP">
             <div class="card-body">
               <h2 class="card-text text-center">Boostrap</h2>
@@ -127,7 +125,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="card">
+        <div class="card hidden">
             <img src="./assets/jquery_original_wordmark_logo_icon_146447.svg" class="card-img-top p-3" alt="JQUERY">
             <div class="card-body">
               <h2 class="card-text text-center">Jquery</h2>
@@ -135,7 +133,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="card">
+        <div class="card hidden">
             <img src="./assets/react_original_logo_icon_146374.svg" class="card-img-top p-3" alt="REACT">
             <div class="card-body">
               <h2 class="card-text text-center">React</h2>
@@ -143,10 +141,10 @@
         </div>
         </div>
       </div>
-        <h3 class="text-center my-3">Herramientas</h3>
+        <h3 class="text-center my-3 hidden">Herramientas</h3>
         <div class="row row-cols-2 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card">
+            <div class="card hidden">
                 <img src="./assets/visualstudiocode_93981.svg" class="card-img-top p-3" alt="VS CODE">
                 <div class="card-body">
                   <h2 class="card-text text-center">VS Code</h2>
@@ -154,7 +152,7 @@
             </div>
             </div>
             <div class="col">
-              <div class="card">
+              <div class="card hidden">
                   <img src="./assets/file_type_git_icon_130581.svg" class="card-img-top p-3" alt="GIT">
                   <div class="card-body">
                     <h2 class="card-text text-center">Git</h2>
@@ -162,7 +160,7 @@
               </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card hidden">
                     <img src="./assets/github-logo_icon-icons.com_73546.svg" class="card-img-top p-3" alt="GITHUB">
                     <div class="card-body">
                       <h2 class="card-text text-center">Github</h2>
@@ -170,7 +168,7 @@
                 </div>
                 </div>
                 <div class="col">
-                  <div class="card">
+                  <div class="card hidden">
                       <img src="./assets/firebase_logo_icon_171157.svg" class="card-img-top p-3" alt="FIREBASE">
                       <div class="card-body">
                         <h2 class="card-text text-center">Firebase</h2>
@@ -181,11 +179,11 @@
       
     </div>
     
-    <h2 class="mt-5 mb-3">Principales Soft Skills</h2>
+    <h2 class="mt-5 mb-3 hidden">Principales Soft Skills</h2>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-3">
           <div class="col">  
-          <div class="card h-100">
+          <div class="card h-100 hidden">
                 <img src="./assets/undraw_processing_re_tbdu.svg" class="card-img-top p-3" alt="trabajo en equipo">
                 <div class="card-body">
                   <h6 class="card-text text-center">Trabajo en Equipo</h6>
@@ -193,7 +191,7 @@
             </div>
             </div>
             <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 hidden">
                 <img src="./assets/undraw_engineering_team_a7n2.svg" class="card-img-top p-3" alt="buena comunicacion">
                 <div class="card-body">
                   <h6 class="card-text text-center">Buena Comunicación</h6>
@@ -201,7 +199,7 @@
             </div>
             </div>
             <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 hidden">
                 <img src="./assets/undraw_pair_programming_re_or4x.svg" class="card-img-top p-3" alt="adaptabilidad">
                 <div class="card-body">
                   <h6 class="card-text text-center">Adaptabilidad</h6>
@@ -216,11 +214,11 @@
   <!-- PROYECTOS -->
   <section id="proyectos" class="m-5 px-5">
     <div id="proyectos"><p class="oculto">""</p></div>
-    <h3 class="mt-5">Proyectos</h3>
+    <h3 class="mt-5 hidden">Proyectos</h3>
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
 
-       <div class="col tarjeta">
+       <div class="col tarjeta hidden">
           <img src="./assets/tickets_soporte.png" alt="app de tickets soporte">
           <div class="overlay">
              <h3>App Tickets de Soporte</h3>
@@ -238,7 +236,7 @@
           </div>
        </div> 
 
-       <div class="col tarjeta">
+       <div class="col tarjeta hidden">
         <img src="./assets/lista_de_tareas_jquery.png" alt="Lista de Tareas">
         <div class="overlay">
            <h3>Lista de Tareas</h3>
@@ -257,7 +255,7 @@
 
 
 
-       <div class="col tarjeta">
+       <div class="col tarjeta hidden">
         <img src="./assets/app_paises.png" alt="App Paises ">
         <div class="overlay">
            <h3>App Paises</h3>
@@ -273,7 +271,7 @@
         </div>
      </div> 
 
-     <div class="col tarjeta">
+     <div class="col tarjeta hidden">
       <img src="./assets/analisis_de_ventas.png" alt="Analisis de Ventas ">
       <div class="overlay">
          <h3>Análisis de Ventas</h3>
@@ -289,7 +287,7 @@
       </div>
       </div> 
 
-      <div class="col tarjeta">
+      <div class="col tarjeta hidden">
         <img src="./assets/registro_trabajadores.png" alt="Registro de Trabajadores">
         <div class="overlay">
            <h3>Registro de Trabajadores</h3>
@@ -305,7 +303,7 @@
         </div>
         </div> 
 
-        <div class="col tarjeta">
+        <div class="col tarjeta hidden">
           <img src="./assets/carrito_de_compras.png" alt="Carrito de Compras">
           <div class="overlay">
              <h3>Carrito de Compras</h3>
@@ -327,9 +325,9 @@
   <!-- SECCION DE CONTACTO -->
   <section id="contacto" class="container">
     <div id="contacto"><p class="oculto">""</p></div>
-    <h1 class="mt-5">Contactame!</h1>
+    <h1 class="mt-5 hidden">Contactame!</h1>
     <p class="mt-3 fs-5">Si crees que puedo colaborar con tu equipo de trabajo ¡no dudes en contactarme!, puedes hacerlo a traves de mis datos de contacto o a travez del siguiente formulario y a la brevedad me contactare contigo.</p>
-    <form id="form_contacto" action="" class="my-5 p-4 w-75 m-auto bg-secondary text-center">
+    <form id="form_contacto" action="" class="my-5 p-4 w-75 m-auto bg-secondary text-center text-dark hidden">
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="" autocomplete="off">
         <label for="floatingInput">Nombre de Contacto:</label>
