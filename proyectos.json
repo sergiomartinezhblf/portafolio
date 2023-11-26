@@ -1,0 +1,51 @@
+[
+    {
+        "titulo":"App Tickets de Soporte",
+        "descripcion": "Aplicación de Tickets de soporte en base a un formulario que guarda la información del ticket en firebase, la app despliega los tickets abiertos y los tickets cerrados, los tickets abiertos se pueden modificar y los tickets cerrados se pueden eliminar",
+        "imagen": "./assets/tickets_soporte.png",
+        "tecnologias": ["HTML","CSS","JAVASCRIPT","BOOTSTRAP","JQUERY","FIREBASE"],
+        "url": "https://tickets-soporte-jquery.web.app/",
+        "repositorio": "N/A"             
+    },
+    {
+        "titulo":"Lista de Tareas",
+        "descripcion": "Lista de Tareas que despliega las tareas en una lista que cronometra el tiempo de la tarea, alerta con cambio de color el tiempo que tarda sin cerrarse, se pueden desplegar las tareas pendientes y completadas",
+        "imagen": "./assets/lista_de_tareas_jquery.png",
+        "tecnologias": ["HTML","CSS","JAVASCRIPT","BOOTSTRAP","JQUERY"],
+        "url": "https://sergiomartinezhblf.github.io/lista-de-tareas-jquery-boostrap/",
+        "repositorio": "https://github.com/sergiomartinezhblf/lista-de-tareas-jquery-boostrap"             
+    },
+    {
+        "titulo":"App Paises",
+        "descripcion": "App que conecta con la API de REST Countries y despliega la lista de todos los paises del mundo, se pueden seleccionar por regiones y tambien se pueden buscar a travez de un search form.",
+        "imagen": "./assets/app_paises.png",
+        "tecnologias": ["HTML","CSS","JAVASCRIPT","BOOTSTRAP"],
+        "url": "https://sergiomartinezhblf.github.io/app-paises-vanillajs-boostrap/",
+        "repositorio": "https://github.com/sergiomartinezhblf/app-paises-vanillajs-boostrap"             
+    },
+    {
+        "titulo":"App Análisis de Ventas",
+        "descripcion": "App que genera ventas aleatorias de 10 vendedores y los clasifica de acuerdo a sus ventas, en tres niveles de vendedor, la app genera 2 gráficos de las ventas con la libreria de chart.js, uno con las ventas por vendedor y otro con las ventas totales ",
+        "imagen": "./assets/analisis_de_ventas.png",
+        "tecnologias": ["HTML","CSS","JAVASCRIPT","BOOTSTRAP"],
+        "url": "https://sergiomartinezhblf.github.io/analisis-de-ventas-boostrap-chartjs/",
+        "repositorio": "https://github.com/sergiomartinezhblf/analisis-de-ventas-boostrap-chartjs"             
+    },
+    {
+        "titulo":"App de Registro de Trabajadores",
+        "descripcion": "App que permite registrar los datos de trabajadores por medio de un formulario que valida los datos para ver si son ingresados correctamente por medio de expresiones regulares, se despliega una lista de los trabajadores agregados y los puede mostrar por departamento, ademas guarda los registros en localstorage.",
+        "imagen": "./assets/registro_trabajadores.png",
+        "tecnologias": ["HTML","CSS","JAVASCRIPT","BOOTSTRAP"],
+        "url": "https://sergiomartinezhblf.github.io/Registro-de-trabajadores-vanilla-js/",
+        "repositorio": "https://github.com/sergiomartinezhblf/Registro-de-trabajadores-vanilla-js"             
+    },
+    {
+        "titulo":"App Carrito de Compras",
+        "descripcion": "App que despliega un catálogo de productos y permite agregarlos al carrito de compras, el carrito de comprar permite agregar y eliminar mas productos y muestra el total a pagar.",
+        "imagen": "./assets/carrito_de_compras.png",
+        "tecnologias": ["HTML","CSS","JAVASCRIPT"],
+        "url": "https://sergiomartinezhblf.github.io/Carrito-de-compras-Vainilla-JS/",
+        "repositorio": "https://github.com/sergiomartinezhblf/Carrito-de-compras-Vainilla-JS"             
+    }
+
+]

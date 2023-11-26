@@ -450,6 +450,17 @@ h1{
     opacity: 1;
 }
 
+/*ESTILOS DEL MODAL*/
+
+.modal-header{
+    height: 50px;
+    background-color: var(--color-principal);
+}
+
+.modal-footer{
+    background-color: var(--color-secundario);
+}
+
 @media (width> 991.98px) { 
 
     .card h2{
@@ -520,6 +531,10 @@ h1{
 
     h1{
         margin-top: 20%;
+    }
+
+    .card-body h2{
+        font-size: 12px;
     }
 
     .tarjeta{

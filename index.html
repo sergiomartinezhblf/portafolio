@@ -70,7 +70,7 @@
       <div id="caratula_foto" class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
         <div class="marco">
           <div class="foto">
-            <img src="./assets/icono-de-persona.png" alt="foto">
+            <img id="foto" src="./assets/foto_sergio.png" alt="foto">
           </div>
         </div>
         
@@ -90,7 +90,7 @@
     <h3 class="text-center mb-3 hidden">Lenguajes de programación</h3>    
     <div class="row row-cols-3 g-3">
         <div class="col">
-        <div class="card hidden">
+        <div class="card h-100 hidden">
             <img src="./assets/file_type_html_icon_130541.svg" class="card-img-top p-3" style="max-width: 250px;" alt="HTML">
             <div class="card-body">
               <h2 class="card-text text-center">HTML</h2>
@@ -98,7 +98,7 @@
         </div> 
         </div>
         <div class="col">
-        <div class="card hidden">
+        <div class="card h-100 hidden">
             <img src="./assets/file_type_css_icon_130661.svg" class="card-img-top p-3" style="max-width: 250px;" alt="CSS">
             <div class="card-body">
               <h2 class="card-text text-center">CSS</h2>
@@ -106,7 +106,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="card hidden">
+        <div class="card h-100 hidden">
             <img src="./assets/javascript_icon_130900.svg" class="card-img-top p-3" style="max-width: 250px;" alt="JAVASCRIPT">
             <div class="card-body">
               <h2 class="card-text text-center">Javascript</h2>
@@ -117,7 +117,7 @@
     <h3 class="text-center my-3 hidden">Librerias</h3>
     <div class="row row-cols-3 g-3">
         <div class="col">
-        <div class="card hidden">
+        <div class="card h-100 hidden">
             <img src="./assets/bootstrap_plain_logo_icon_146619.svg" class="card-img-top p-3" alt="BOOSTRAP">
             <div class="card-body">
               <h2 class="card-text text-center">Boostrap</h2>
@@ -125,7 +125,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="card hidden">
+        <div class="card h-100 hidden">
             <img src="./assets/jquery_original_wordmark_logo_icon_146447.svg" class="card-img-top p-3" alt="JQUERY">
             <div class="card-body">
               <h2 class="card-text text-center">Jquery</h2>
@@ -133,7 +133,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="card hidden">
+        <div class="card h-100 hidden">
             <img src="./assets/react_original_logo_icon_146374.svg" class="card-img-top p-3" alt="REACT">
             <div class="card-body">
               <h2 class="card-text text-center">React</h2>
@@ -144,7 +144,7 @@
         <h3 class="text-center my-3 hidden">Herramientas</h3>
         <div class="row row-cols-2 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card hidden">
+            <div class="card h-100 hidden">
                 <img src="./assets/visualstudiocode_93981.svg" class="card-img-top p-3" alt="VS CODE">
                 <div class="card-body">
                   <h2 class="card-text text-center">VS Code</h2>
@@ -152,7 +152,7 @@
             </div>
             </div>
             <div class="col">
-              <div class="card hidden">
+              <div class="card h-100 hidden">
                   <img src="./assets/file_type_git_icon_130581.svg" class="card-img-top p-3" alt="GIT">
                   <div class="card-body">
                     <h2 class="card-text text-center">Git</h2>
@@ -160,7 +160,7 @@
               </div>
               </div>
               <div class="col">
-                <div class="card hidden">
+                <div class="card h-100 hidden">
                     <img src="./assets/github-logo_icon-icons.com_73546.svg" class="card-img-top p-3" alt="GITHUB">
                     <div class="card-body">
                       <h2 class="card-text text-center">Github</h2>
@@ -168,7 +168,7 @@
                 </div>
                 </div>
                 <div class="col">
-                  <div class="card hidden">
+                  <div class="card h-100 hidden">
                       <img src="./assets/firebase_logo_icon_171157.svg" class="card-img-top p-3" alt="FIREBASE">
                       <div class="card-body">
                         <h2 class="card-text text-center">Firebase</h2>
@@ -212,7 +212,7 @@
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos" class="m-5 px-5">
+  <section id="proyectos" class="m-3 m-md-5 px-2">
     <div id="proyectos"><p class="oculto">""</p></div>
     <h3 class="mt-5 hidden">Proyectos</h3>
 
@@ -232,7 +232,7 @@
                 <li><img src="./assets/firebase_logo_icon_171157.svg" style="width: 30px;" alt="FIREBASE"></li>
               </ul>
               </div>
-              <a><button class="btn btn-outline-light" type="button">Detalles</button></a>
+              <a><button class="btn btn-outline-light btnproyecto" data-proyecto="App Tickets de Soporte" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Detalles</button></a>
           </div>
        </div> 
 
@@ -249,7 +249,7 @@
               <li><img src="./assets/jquery_original_wordmark_logo_icon_146447.svg" style="width: 30px;" alt="JQUERY"></li>
             </ul>
             </div>
-            <a><button class="btn btn-outline-light" type="button">Detalles</button></a>
+            <a><button class="btn btn-outline-light btnproyecto" data-proyecto="Lista de Tareas" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Detalles</button></a>
         </div>
      </div> 
 
@@ -267,7 +267,7 @@
               <li><img src="./assets/bootstrap_plain_logo_icon_146619.svg" style="width: 30px;" alt="BOOTSTRAP"></li>
             </ul>
             </div>
-            <a><button class="btn btn-outline-light" type="button">Detalles</button></a>
+            <a><button class="btn btn-outline-light btnproyecto" data-proyecto="App Paises" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Detalles</button></a>
         </div>
      </div> 
 
@@ -283,7 +283,7 @@
             <li><img src="./assets/bootstrap_plain_logo_icon_146619.svg" style="width: 30px;" alt="BOOTSTRAP"></li>
           </ul>
           </div>
-          <a><button class="btn btn-outline-light" type="button">Detalles</button></a>
+          <a><button class="btn btn-outline-light btnproyecto" data-proyecto="App Análisis de Ventas" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Detalles</button></a>
       </div>
       </div> 
 
@@ -299,7 +299,7 @@
               <li><img src="./assets/bootstrap_plain_logo_icon_146619.svg" style="width: 30px;" alt="BOOTSTRAP"></li>
             </ul>
             </div>
-            <a><button class="btn btn-outline-light" type="button">Detalles</button></a>
+            <a><button class="btn btn-outline-light btnproyecto" data-proyecto="App de Registro de Trabajadores" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Detalles</button></a>
         </div>
         </div> 
 
@@ -314,7 +314,7 @@
                 <li><img src="./assets/javascript_icon_130900.svg" style="width: 30px;" alt="JAVASCRIPT"></li>
                 </div>
               </ul>
-              <a><button class="btn btn-outline-light" type="button">Detalles</button></a>
+              <a><button class="btn btn-outline-light btnproyecto" data-proyecto="App Carrito de Compras" type="button" data-bs-toggle="modal" data-bs-target="#Modal">Detalles</button></a>
           </div>
           </div> 
 
@@ -344,6 +344,46 @@
     </form>
   </section>
 
+
+<!-- MODAL DE PROYECTOS -->
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card" style="width: 100%;">
+          <img src="./assets/app_paises.png" class="card-img-top mimagen" alt="...">
+          <div class="card-body">
+            <h5 class="card-title mtitulo">Titulo del proyecto</h5>
+            <p class="card-text mtext">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Tecnologías utilizadas:</li>
+            <li class="list-group-item miconos">
+              <img src="./assets/file_type_html_icon_130541.svg" style="width: 30px; margin: 5px;" alt="HTML">
+              <img src="./assets/file_type_css_icon_130661.svg" style="width: 30px; margin: 5px;" alt="CSS">
+              <img src="./assets/javascript_icon_130900.svg" style="width: 30px; margin: 5px;" alt="JAVASCRIPT">
+              <img src="./assets/bootstrap_plain_logo_icon_146619.svg" style="width: 30px; margin: 5px;" alt="BOOTSTRAP">
+              <img src="./assets/jquery_original_wordmark_logo_icon_146447.svg" style="width: 30px; margin: 5px;" alt="JQUERY">
+              <img src="./assets/firebase_logo_icon_171157.svg" style="width: 30px; margin: 5px;" alt="FIREBASE">
+            </li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link linklive" target="_blank">Live Demo</a>
+            <a href="#" class="card-link linkrepo" target="_blank">Repositorio</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Boostrap Javascript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

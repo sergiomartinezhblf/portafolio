@@ -11,6 +11,18 @@ const cards = document.getElementsByClassName("card")
 const ocultos = document.getElementsByClassName("oculto")
 const navtitle = document.getElementById("navtitle")
 const secciones_ocultas= document.querySelectorAll(".hidden")
+const foto = document.getElementById("foto")
+const cardtitle = document.querySelector(".mtitulo")
+const cardtext = document.querySelector(".mtext")
+const cardimg = document.querySelector(".mimagen")
+const iconos = document.querySelector(".miconos")
+const linklive = document.querySelector(".linklive")
+const linkrepo = document.querySelector(".linkrepo")
+const btnProyecto = document.querySelectorAll(".btnproyecto")
+const modalbody = document.querySelector(".modal-body")
+const modalfooter = document.querySelector(".modal-footer")
+const listgroupitem = document.querySelector(".list-group-item")
+
 
 //BOTON DARK MODE
 
@@ -37,6 +49,11 @@ ligthmode.addEventListener("click",()=>{
         const element = ocultos[index];
         element.classList.remove("oculto_dark")
     }
+    foto.classList.remove("dark")
+    modalbody.classList.remove("dark")
+    modalfooter.classList.remove("bg-dark")
+    listgroupitem.classList.remove("dark")
+    iconos.classList.remove("dark")
     
 })
 
@@ -59,6 +76,13 @@ darkmode.addEventListener("click",()=>{
         const element = ocultos[index];
         element.classList.add("oculto_dark")
     }
+    foto.classList.add("dark")
+    modalbody.classList.add("dark")
+    modalfooter.classList.add("bg-dark")
+    listgroupitem.classList.add("dark")
+    iconos.classList.add("dark")
+
+
 })
 
 //CAMBIO DE CONTENIDO DE NAV TITLE
@@ -82,3 +106,56 @@ const observer_scroll = new IntersectionObserver((entries)=>{
 })
 
 secciones_ocultas.forEach(seccion => observer_scroll.observe(seccion))
+
+
+//PROYECTOS MODAL
+
+const fetchData = async() =>{
+    try {
+        const res = await fetch("./proyectos.json")
+        const data = await res.json()
+        console.log(data)
+        btnProyecto.forEach((el)=>{
+             el.addEventListener("click",(e)=>{
+                    let titulo_proyecto = e.target.dataset.proyecto
+                    const proyecto = data.filter(el=>el.titulo==titulo_proyecto)
+                    
+                    cardtitle.innerHTML = proyecto[0].titulo
+                    cardtext.textContent = proyecto[0].descripcion
+                    cardimg.src= proyecto[0].imagen
+                    linklive.href = proyecto[0].url
+                    linkrepo.href = proyecto[0].repositorio
+                    iconos.innerHTML= icons_tecnologias(proyecto[0].tecnologias)
+                    
+        })
+        
+        })
+       
+    } catch (error) {
+        
+    }
+}
+
+//FUNCION PARA GENERAR EL HTML DE LAS TECNOLOGIAS UTILIZADAS EN CADA PROYECTO
+const icons_tecnologias = (tecnologias) =>{
+   let lista="" 
+   tecnologias.forEach( tecnologia =>{
+   switch(tecnologia){
+    case "HTML": lista+=`<img src="./assets/file_type_html_icon_130541.svg" style="width: 30px; margin: 5px;" alt="HTML">`
+          break
+    case "CSS": lista+=`<img src="./assets/file_type_css_icon_130661.svg" style="width: 30px; margin: 5px;" alt="CSS">` 
+          break
+    case "JAVASCRIPT": lista+= `<img src="./assets/javascript_icon_130900.svg" style="width: 30px; margin: 5px;" alt="JAVASCRIPT">` 
+          break
+    case "BOOTSTRAP": lista+= `<img src="./assets/bootstrap_plain_logo_icon_146619.svg" style="width: 30px; margin: 5px;" alt="BOOTSTRAP">`
+          break
+    case "JQUERY": lista+= `<img src="./assets/jquery_original_wordmark_logo_icon_146447.svg" style="width: 30px; margin: 5px;" alt="JQUERY">`
+          break
+    case "FIREBASE": lista+= `<img src="./assets/firebase_logo_icon_171157.svg" style="width: 30px; margin: 5px;" alt="FIREBASE">`
+          break    
+}
+  })
+return lista
+}
+document.addEventListener("DOMContentLoaded",fetchData)
+
