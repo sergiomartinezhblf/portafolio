@@ -52,6 +52,7 @@
 
 <!-- HOME -->
 <section id="home" class="text-light">
+    
     <div id="homerow" class="row p-5">
       <div id="caratula" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
         <h1 id="title">Hola soy Sergio Martínez</h1> 
@@ -62,7 +63,7 @@
             <li id="dynamic_li2" class=""><span>Lic. en Informatica</span></li>
           </ul>
         </div> 
-        <div id="estracto" class="estracto mt-3 mt-md-5">
+        <div id="estracto" class="estracto mt-5">
           <p class="fs-4">Soy un desarrollador con habilidades Front End con toda la actitud y las habilidades para poder iniciar carrera en la industria desarrollo web. </p>
         </div> 
       </div>
@@ -73,22 +74,25 @@
             <img id="foto" src="./assets/foto_sergio.png" alt="foto">
           </div>
         </div>
-        
+        <a id="curriculum" href="/assets/Curriculum_Sergio_Front_End_JR.pdf" download="Curriculum_Sergio_Martinez" class="btn btn-success"><i class="bi bi-download"></i> Curriculum</a>
       </div>
+      </div>
+      <div id="fotomarcadeagua">
+        <img src="./assets/foto_sergio.png" width="350px" alt="foto">
       </div>
 </section>
 
   <!-- ACERCA DE MI -->
   <section id="about" class="container mt-5">
     <div ><p class="oculto">""</p></div>
-    <h2 class="mt-5 hidden">Acerca de mi</h2>
+    <h2 class="mt-5 hidden text-success">Acerca de mi</h2>
     <p id="acerca" class="mt-3 mt-md-5 hidden">Soy un desarrollador con habilidades Front End, sin experiencia laboral en el medio, en busca de una oportunidad para integrarme a un equipo de desarrollo. Por diversas 
         circunstancias me aleje de la IT, pero estoy de vuelta, con toda la actitud y las habilidades para poder iniciar carrera en el desarrollo web.  
     </p>
     <h2 class="hidden">Hard Skills</h2>
     <div id="hard_skills" class="container align-items-center">
     <h3 class="text-center mb-3 hidden">Lenguajes de programación</h3>    
-    <div class="row row-cols-3 g-3">
+    <div class="row row-cols-4 g-3">
         <div class="col">
         <div class="card h-100 hidden">
             <img src="./assets/file_type_html_icon_130541.svg" class="card-img-top p-3" style="max-width: 250px;" alt="HTML">
@@ -113,6 +117,14 @@
             </div>
         </div>
         </div>
+        <div class="col">
+          <div class="card h-100 hidden">
+              <img src="./assets/php_icon_130857.svg" class="card-img-top p-3" style="max-width: 250px;" alt="PHP">
+              <div class="card-body">
+                <h2 class="card-text text-center">PHP</h2>
+              </div>
+          </div>
+          </div>
     </div>
     <h3 class="text-center my-3 hidden">Librerias</h3>
     <div class="row row-cols-3 g-3">
@@ -142,7 +154,7 @@
         </div>
       </div>
         <h3 class="text-center my-3 hidden">Herramientas</h3>
-        <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="row row-cols-4 g-3">
           <div class="col">
             <div class="card h-100 hidden">
                 <img src="./assets/visualstudiocode_93981.svg" class="card-img-top p-3" alt="VS CODE">
@@ -179,7 +191,7 @@
       
     </div>
     
-    <h2 class="mt-5 mb-3 hidden">Principales Soft Skills</h2>
+    <h2 class="mt-5 mb-3 hidden text-success">Principales Soft Skills</h2>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-3">
           <div class="col">  
@@ -214,7 +226,7 @@
   <!-- PROYECTOS -->
   <section id="proyectos" class="m-3 m-md-5 px-2">
     <div id="proyectos"><p class="oculto">""</p></div>
-    <h3 class="mt-5 hidden">Proyectos</h3>
+    <h3 class="mt-5 hidden text-success">Proyectos</h3>
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
 
@@ -323,11 +335,13 @@
   </section>
 
   <!-- SECCION DE CONTACTO -->
-  <section id="contacto" class="container">
+  <section id="contacto" class="">
     <div id="contacto"><p class="oculto">""</p></div>
+    <div class="container">
     <h1 class="mt-5 hidden">Contactame!</h1>
     <p class="mt-3 fs-5">Si crees que puedo colaborar con tu equipo de trabajo ¡no dudes en contactarme!, puedes hacerlo a traves de mis datos de contacto o a travez del siguiente formulario y a la brevedad me contactare contigo.</p>
-    <form id="form" action="" class="my-5 p-4 w-75 m-auto bg-secondary text-center text-dark hidden">
+    </div>
+    <form id="form" action="" class="my-5 p-4  m-auto bg-secondary text-center text-dark hidden">
       <div class="form-floating mb-3">
         <input type="text" class="form-control" name="from_name" id="from_name" placeholder="" autocomplete="off">
         <label for="from_name">Nombre de Contacto:</label>
@@ -380,7 +394,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>

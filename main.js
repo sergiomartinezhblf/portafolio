@@ -89,7 +89,7 @@ darkmode.addEventListener("click",()=>{
 //CAMBIO DE CONTENIDO DE NAV TITLE
 const observer = new ResizeObserver( items =>{
    let bodywidth = Math.ceil(items[0].contentRect.width)
-   if(bodywidth<450){
+   if(bodywidth<500){
     navtitle.innerHTML= `<i class="bi bi-diamond-half"></i> Portafolio`
    } else {
     navtitle.innerHTML= `<i class="bi bi-diamond-half"></i> Sergio Martínez | Portafolio`

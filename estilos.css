@@ -7,10 +7,17 @@
 
 #home{
     background-color:white;
+    position: relative;
+}
+
+#title{
+    position: relative;
+    z-index: 1;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .principal{
@@ -78,16 +85,16 @@ body{
 
 .static_text{
     color: var(--color-principal);
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
-    line-height: 30px;
-    height: 30px;
+    line-height: 25px;
+    height: 25px;
     margin-right: 0px;
 }
 
 .dynamic_texts{
-    line-height: 30px;
-    height: 30px;
+    line-height: 25px;
+    height: 25px;
     overflow: hidden;
     text-transform: uppercase;
 }
@@ -96,7 +103,7 @@ body{
 .dynamic_texts li{
     list-style: none;
     color: darkblue;
-    font-size: 30px;
+    font-size: 25px;
     top: 0;
     position: relative;
     animation: slide 6s steps(2) infinite;
@@ -104,7 +111,7 @@ body{
 
 @keyframes slide{
     100%{
-        top: -60px;
+        top: -50px;
     }
 }
 
@@ -136,26 +143,29 @@ body{
 
 #caratula{
     position: absolute;
-    top: 15%;
+    top:10%;
     left: 5%;
 }
 
 #caratula_foto{
    position: absolute;
    left: 50%;
-   top: 10%;
+   top: 0%;
 }
 .estracto{
     height: fit-content !important;
     padding: 5px;
     position: absolute;
+    top:35%;
     box-shadow: 16px 14px 20px rgb(37, 36, 36);
     background-color: var(--color-principal);
     color: white;
+    margin-top: 50px;
+    z-index: 1;
 }
 
 h1{
-    margin-top: 20% ;
+    margin-top: 15% ;
     color: var(--color-principal);
 }
 
@@ -220,7 +230,28 @@ h1{
     .foto img{
         width: 90%;
     }
+    
+    #curriculum{
+        position: absolute;
+        margin-top: 330px;
+        background-color: var(--color-principal);
 
+    }
+
+    #curriculum:hover{
+        background-color: var(--color-secundario);
+        color: #121212;
+    }
+
+    #boton_contacto{
+        background-color: var(--color-principal);
+    }
+
+    #boton_contacto:hover{
+        background-color: var(--color-secundario);
+        color: #121212;
+    }
+ 
     form .btn{
         background-color: var(--color-principal);
     }
@@ -232,6 +263,18 @@ h1{
 
     #btn-darkmode{
         background-color: var(--color-principal);
+    }
+
+    #fotomarcadeagua{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+
+    #fotomarcadeagua img{
+        filter: grayscale(100%);
+        opacity: 50%;
     }
 /* EFECTOS CARDS PROYECTOS */
 
@@ -476,6 +519,14 @@ h1{
         object-fit:cover;
     }
 
+    #fotomarcadeagua{
+        display: none;
+    }
+
+    #form{
+        width: 60%;
+    }
+
     
 }
 
@@ -496,6 +547,7 @@ h1{
     .estracto{
         width: 80%;
     }
+
     
     #caratula_foto{
         display: none;
@@ -522,9 +574,22 @@ h1{
         width: 20px;
     }
 
+    #curriculum{
+        position: absolute;
+        left: 20%;
+        top: -60%;
+        z-index: 1;
+       }
+
+    #form{
+        width: 75%;
+    }
+    
  }
 
  @media (max-width: 575.98px) { 
+    
+
     .container .row{
         margin: 0;
     }
@@ -564,10 +629,10 @@ h1{
     }
 
     #form{
-        width: 80%;
+        width: 90%;
     }
 
-
+   
     
     
   }
