@@ -1,4 +1,5 @@
 const body = document.body
+const formulario = document.getElementById("form")
 const caratula = document.getElementById("caratula")
 const homerow = document.getElementById("homerow")
 const about = document.getElementById("about")
@@ -158,4 +159,43 @@ const icons_tecnologias = (tecnologias) =>{
 return lista
 }
 document.addEventListener("DOMContentLoaded",fetchData)
+
+//LIBRERIA EMAILJS
+
+const btn = document.getElementById('boton_contacto')
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...'
+
+   const serviceID = 'default_service'
+   const templateID = 'template_hna3g5c'
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar'
+      appendAlert('El mensaje se ha enviado con exito al correo electronico del programador', 'success')
+    }, (err) => {
+      btn.value = 'Enviar';
+      appendAlert('El mensaje no se envio, ocurrio un error', 'danger')
+    })
+})
+
+//ALERT DE ENVIO DE CORREO EXITOSO
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+  formulario.reset()
+  
+}
 
