@@ -25,6 +25,7 @@ const modalfooter = document.querySelector(".modal-footer")
 const listgroupitem = document.querySelector(".list-group-item")
 
 
+
 //BOTON DARK MODE
 
 const ligthmode = document.getElementById("lightmode")
@@ -56,6 +57,7 @@ ligthmode.addEventListener("click",()=>{
     listgroupitem.classList.remove("dark")
     iconos.classList.remove("dark")
     
+    
 })
 
 darkmode.addEventListener("click",()=>{
@@ -82,6 +84,7 @@ darkmode.addEventListener("click",()=>{
     modalfooter.classList.add("bg-dark")
     listgroupitem.classList.add("dark")
     iconos.classList.add("dark")
+    
 
 
 })

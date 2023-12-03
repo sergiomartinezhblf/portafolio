@@ -238,7 +238,7 @@ h1{
 
     }
 
-    #curriculum:hover{
+    #curriculum:hover, #curriculum2:hover{
         background-color: var(--color-secundario);
         color: #121212;
     }
@@ -527,9 +527,37 @@ h1{
         width: 60%;
     }
 
+    .estracto p{
+        font-size: 22px;
+    }
     
+    .curriculum2{
+        display: none;
+    }
 }
 
+
+#footer{
+    background-color: var(--color-principal);
+}
+
+#footer a {
+    font-size: 30px;
+    color: var(--color-principal);
+}
+
+.enlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 45px;
+    transition: all .5s ease-in-out;
+}
+
+.enlace:hover{
+    transform: scale(1.1);
+}
 
 @media (max-width: 991.98px){ 
     .container .row{
@@ -575,11 +603,14 @@ h1{
     }
 
     #curriculum{
-        position: absolute;
-        left: 20%;
-        top: -60%;
-        z-index: 1;
+        display: none;
        }
+
+    #curriculum2{
+        position: absolute;
+        top: 0;
+        background-color: var(--color-principal);
+    }
 
     #form{
         width: 75%;
@@ -632,7 +663,17 @@ h1{
         width: 90%;
     }
 
+    .estracto p{
+        font-size: 16px;
+    }
    
-    
+    .card img{
+        padding: 5px !important;
+    }
+
+    .card .card-body{
+        font-size: 6px;
+        padding: 5px !important;
+    }
     
   }
