@@ -1,5 +1,13 @@
 [
     {
+        "titulo":"Contador de números",
+        "descripcion":"Aplicación que valida una cadena de texto y puede contar cuantos números ya sea en digito o con letra contiene, si la cadena contiene 8 números o mas es invalida y no puede ser enviada.",
+        "imagen": "./assets/contador_numeros.png",
+        "tecnologias": ["REACT","BOOTSTRAP"],
+        "url": "https://sergiomartinezhblf.github.io/react-contador-de-digitos/",
+        "repositorio": "https://github.com/sergiomartinezhblf/react-contador-de-digitos"             
+    },
+    {
         "titulo":"App Tickets de Soporte",
         "descripcion": "Aplicación de Tickets de soporte en base a un formulario que guarda la información del ticket en firebase, la app despliega los tickets abiertos y los tickets cerrados, los tickets abiertos se pueden modificar y los tickets cerrados se pueden eliminar",
         "imagen": "./assets/tickets_soporte.png",

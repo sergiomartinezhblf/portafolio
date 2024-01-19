@@ -156,7 +156,9 @@ const icons_tecnologias = (tecnologias) =>{
     case "JQUERY": lista+= `<img src="./assets/jquery_original_wordmark_logo_icon_146447.svg" style="width: 30px; margin: 5px;" alt="JQUERY">`
           break
     case "FIREBASE": lista+= `<img src="./assets/firebase_logo_icon_171157.svg" style="width: 30px; margin: 5px;" alt="FIREBASE">`
-          break    
+          break  
+    case "REACT": lista+= `<img src="./assets/react_original_logo_icon_146374.svg" style="width: 30px; margin: 5px;" alt="FIREBASE">`
+          break        
 }
   })
 return lista
